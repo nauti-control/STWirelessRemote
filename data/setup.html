@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NautiControl Seatalk Setup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="ConfigureSetupScreen()">
+  <header>
+    <nav>
+      <a href="\index.html">Home</a>
+      <a href="\setup.html" class="active">Setup</a>
+     
+    </nav>
+    <h1>NautiControl Seatalk Setup</h1>
+  </header>
+  <main>
+    <div id="setupdiv" class="form-container">
+      <form id="setupform" action="\SetOptions.html" method="post" onsubmit="PostDeviceOptions();return false;">
+        <h2>Configure Button Actions</h2>
+        <div>
+          <label for="button1act">Button 1 Action:</label>
+          <select id="button1act" name="button1act">
+
+          </select>
+        </div>
+        <div>
+          <label for="button2act">Button 2 Action:</label>
+          <select id="button2act" name="button2act">
+
+
+          </select>
+        </div>
+        <div>
+          <label for="button3act">Button 3 Action:</label>
+          <select id="button3act" name="button3act">
+
+
+          </select>
+        </div>
+        <div>
+          <label for="button4act">Button 4 Action:</label>
+          <select id="button4act" name="button4act">
+
+          </select>
+        </div>
+        <div>
+          <label for="button5act">Button 5 Action:</label>
+          <select id="button5act" name="button5act">
+
+          </select>
+        </div>
+        <div>
+          <label for="button6act">Button 6 Action:</label>
+          <select id="button6act" name="button6act">
+
+          </select>
+        </div>
+        <div>
+          <label for="button7act">Button 7 Action:</label>
+          <select id="button7act" name="button7act">
+
+          </select>
+        </div>
+        <div>
+          <label for="button8act">Button 8 Action:</label>
+          <select id="button8act" name="button8act">
+
+          </select>
+        </div>
+
+        <div>
+          <label for="enableRemoteCompass">Enable Remote Compass:</label>
+          <checkbox id="enableRemoteCompass" name="enableRemoteCompass"/>
+
+         
+        </div>
+
+        <h2>Configure Race Timer</h2>
+        <div>
+          <label for="timermin">Minutes:</label>
+          <select id="timermin" name="timermin">
+
+          </select>
+        </div>
+        <div>
+          <label for="timersec">Seconds:</label>
+          <select id="timersec" name="timersec">
+
+          </select>
+        </div>
+        <input type="submit" value="Save Settings">
+      </form>
+    </div>
+
+    <div id="savingdiv" class="message-container" style="visibility: collapse;color: red;" id="savingdiv">
+      <p>Settings saved successfully.</p>
+    </div>
+  </main>
+  <script src="jquery-3.6.3.min.js"></script>
+  <script src="nauticontrol.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    background: linear-gradient(to bottom, #87CEEB, #FFF);
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 1em;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #FFF;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3E8E41;
+  }
+  
+  form {
+    margin: 1em;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: #FFF;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3E8E41;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .form-container {
+    visibility: collapse;
+  }
+  
+  .message-container {
+    visibility: collapse;
+  }
+  
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #FFF;
+    border-bottom: 1px solid #CCC;
+  }
+  
+  nav a {
+    display: block;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: #FFF;
+    margin: 0.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  nav a.active {
+    background-color: #87CEEB;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #87CEEB;
+    padding: 1em;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #FFF;
+  }
+
+  .button-row {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .button-row button {
+    flex: 1;
+    margin: 0.5em;
+  }

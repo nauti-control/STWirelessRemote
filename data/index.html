@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NautiControl Seatalk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="\index.html" class="active">Home</a>
+      <a href="\setup.html">Setup</a>
+     
+    </nav>
+    <h1>NautiControl Seatalk</h1>
+  </header>
+  <main>
+    <h2>Boat Controls</h2>
+    <div class="button-row">
+      <button onclick="SendControl('minus1');">-1</button>
+      <button onclick="SendControl('plus1');">+1</button>
+    </div>
+  
+    <div class="button-row">
+      <button onclick="SendControl('minus10');">-10</button>
+      <button onclick="SendControl('plus10');">+10</button>
+    </div>
+    
+    <div class="button-row">
+      <button onclick="SendControl('auto');">Auto</button>
+      <button onclick="SendControl('standby');">Standby</button>
+    </div>
+    
+    <div class="button-row">
+      <button onclick="SendControl('wind');">Auto Wind</button>
+      <button onclick="SendControl('starttimer');">Start Timer</button>
+    </div>
+  </main>
+  <script src="jquery-3.6.3.min.js"></script>
+  <script src="nauticontrol.js"></script>
+</body>
+</html>
