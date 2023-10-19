@@ -1,0 +1,63 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=NautiControlSTWireless
+*Date=19:10:45
+*CreatedBy=Fritzing 0.9.10b.2022-07-01.CD-2134-0-40d23c29
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;DIP (Dual Inline) [THT];37.4257;-41.858;0;Bottom;IC1_A
+2;;THT;8.2677;-37.7941;0;Bottom;J1
+3;;DIP (Dual Inline) [THT];37.4257;-41.7442;0;Bottom;IC1_C
+4;;;41.2427;-50.4001;0;Bottom;Jumper
+5;270;THT;23.5077;-55.5741;0;Bottom;270O
+6;3.9k;THT;71.7677;-47.9541;90;Bottom;3.9kO
+7;;THT;81.9277;-27.6341;0;Bottom;J1
+8;;DIP (Dual Inline) [THT];37.4257;-41.6305;0;Bottom;IC1_E
+9;1k;THT;66.6877;-37.7941;90;Bottom;1kO
+10;;DIP (Dual Inline) [THT];37.4257;-41.5734;0;Bottom;IC1_F
+11;;DIP (Dual Inline) [THT];37.4257;-41.5734;0;Bottom;IC1_F
+12;;DIP (Dual Inline) [THT];19.6335;-37.7942;0;Bottom;IC1_A
+13;;DIP (Dual Inline) [THT];34.7026;-41.6819;0;Bottom;IC1_PWR
+14;;DIP (Dual Inline) [THT];37.4257;-41.6875;0;Bottom;IC1_D
+15;270;THT;53.9877;-25.0941;90;Bottom;270O
+16;;DIP (Dual Inline) [THT];34.7026;-41.6819;0;Bottom;IC1_PWR
+17;;DIP (Dual Inline) [THT];37.4257;-41.8012;0;Bottom;IC1_B
+18;;DIP (Dual Inline) [THT];37.4257;-41.7442;0;Bottom;IC1_C
+19;;DIP (Dual Inline) [THT];60.2735;-27.6915;0;Bottom;IC1_B
+20;;DIP (Dual Inline) [THT];67.9577;-16.2041;180;Bottom;PC817
+21;;DIP (Dual Inline) [THT];37.4257;-41.6875;0;Bottom;IC1_D
+22;;DIP (Dual Inline) [THT];22.0093;3.80537;0;Bottom;IC1_B
+23;;TO92 [THT];61.6966;-50.6846;-90;Bottom;BCP547
+24;5V;to220-igo;53.9877;-12.7116;0;Bottom;7805
+25;;DIP (Dual Inline) [THT];37.4257;-41.6305;0;Bottom;IC1_E
+26;;DIP (Dual Inline) [THT];37.4257;-41.7442;0;Bottom;IC1_C
+27;;;26.0213;-25.5466;90;Bottom;ESP32
+28;;DIP (Dual Inline) [THT];37.4257;-41.6305;0;Bottom;IC1_E
+29;;DIP (Dual Inline) [THT];37.2493;-16.5714;0;Bottom;IC1_C
+30;;DIP (Dual Inline) [THT];37.4257;-41.6875;0;Bottom;IC1_D
+31;;DIP (Dual Inline) [THT];37.4257;-41.858;0;Bottom;IC1_A
+32;;DIP (Dual Inline) [THT];42.4935;-40.3343;0;Bottom;IC1_A
+33;;THT;87.0077;-50.4941;0;Bottom;Ant
+34;;DIP (Dual Inline) [THT];57.7977;-41.6041;0;Bottom;PC817
+35;;DIP (Dual Inline) [THT];37.4257;-41.8012;0;Bottom;IC1_B
+36;;DIP (Dual Inline) [THT];34.7026;-41.6819;0;Bottom;IC1_PWR
+37;;DIP (Dual Inline) [THT];37.4257;-41.5734;0;Bottom;IC1_F
+38;;;73.7043;-4.48626;0;Bottom;TXT2
+39;10k;THT;79.3877;-40.3341;0;Bottom;10kO
+40;;THT;50.1777;-55.5741;90;Bottom;433mhz
+41;0.030;5 mm [THT];15.8876;-58.8051;0;Bottom;PWR
+42;;DIP (Dual Inline) [THT];37.2493;-41.858;0;Bottom;IC1_A
+43;;DIP (Dual Inline) [THT];37.4257;-41.8012;0;Bottom;IC1_B
+44;;DIP (Dual Inline) [THT];24.8419;-35.4249;0;Bottom;IC1_D
+45;;THT;83.1977;-55.5741;90;Bottom;2
+46;10k;THT;46.3677;-12.3941;90;Bottom;10kO
+47;;;74.1815;-1.01126;0;Bottom;TXT1
+48;10k;THT;76.8477;-20.0141;90;Bottom;10kO
