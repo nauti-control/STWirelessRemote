@@ -13,7 +13,7 @@ struct WebOptions
     int button8;
     int timermin;
     int timersec;
-    bool enableRemoteCompass;
+
 };
 
 #endif

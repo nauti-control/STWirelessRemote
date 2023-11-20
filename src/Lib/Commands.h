@@ -4,8 +4,8 @@
 enum commands : int
 {
     minus_1 = 0,
-    minus_10 = 1,
-    plus_1 = 2,
+    plus_1 = 1,
+    minus_10 = 2,
     plus_10 = 3,
     auto_but = 4,
     standby_but = 5,

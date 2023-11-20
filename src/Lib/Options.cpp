@@ -17,7 +17,7 @@ void Options::SaveWebOptions(WebOptions webOptions)
     _preferences.putInt("button8", webOptions.button8);
     _preferences.putInt("timermin", webOptions.timermin);
     _preferences.putInt("timersec", webOptions.timersec);
-    _preferences.putBool("enableRemoteCompass", webOptions.enableRemoteCompass);
+    
 }
 
 WebOptions Options::GetWebOptions()
@@ -55,19 +55,16 @@ WebOptions Options::GetWebOptions()
     }
     if (_preferences.isKey("button8"))
     {
-        webOptions.button8 = _preferences.getInt("button8", 6);
+        webOptions.button8 = _preferences.getInt("button8", 7);
     }
     if (_preferences.isKey("timermin"))
     {
-        webOptions.timermin = _preferences.getInt("timermin", 7);
+        webOptions.timermin = _preferences.getInt("timermin", 5);
     }
     if (_preferences.isKey("timersec"))
     {
         webOptions.timersec = _preferences.getInt("timersec", 0);
     }
-    if (_preferences.isKey("enableRemoteCompass"))
-    {
-        webOptions.enableRemoteCompass = _preferences.getBool("enableRemoteCompass,false");
-    }
+
     return webOptions;
 }

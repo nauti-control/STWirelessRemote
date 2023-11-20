@@ -59,8 +59,7 @@ function SetOptions(data) {
     dropdowntimermin.value = data.timermin;
     var dropdowntimersec = document.getElementById("timersec");
     dropdowntimersec.value = data.timersec;
-    var enableRemoteCompass=document.getElementById("enableRemoteCompass");
-    enableRemoteCompass.value=data.enableRemoteCompass;
+  
 
 }
 

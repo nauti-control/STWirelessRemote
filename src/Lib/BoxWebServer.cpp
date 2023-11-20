@@ -125,7 +125,6 @@ void BoxWebServer::GetOptions(AsyncWebServerRequest *request)
     response->printf("\"button8opt\": %d, \n", options.button8);
     response->printf("\"timermin\": %d, \n", options.timermin);
     response->printf("\"timersec\": %d, \n", options.timersec);
-    response->printf("\"enableRemoteCompass\" :%i \n", options.enableRemoteCompass);
     response->print("}");
 
     request->send(response);
