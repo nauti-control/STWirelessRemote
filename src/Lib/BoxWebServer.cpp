@@ -100,11 +100,7 @@ void BoxWebServer::SetOptions(AsyncWebServerRequest *request)
         options.timersec = p->value().toInt();
     }
 
-    if (request->hasParam("enableRemoteCompass", true))
-    {
-        AsyncWebParameter *p = request->getParam("enableRemoteCompass", true);
-        options.enableRemoteCompass = p->value();
-    }
+   
     _options->SaveWebOptions(options);
     Serial.println("Sending Response");
     request->send(200);
