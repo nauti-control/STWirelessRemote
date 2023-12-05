@@ -1,13 +1,11 @@
 #include "SignalManager.h"
 
-
 /// @brief Signal Manager Class To Route Seatalk to NMEA as well as update Seatalk Data
-/// @param seaTalkData 
+/// @param seaTalkData
 SignalManager::SignalManager(SeaTalkData *seaTalkData)
 {
-    _seaTalkData=seaTalkData;
-    _nmea=new Nmea();
-
+    _seaTalkData = seaTalkData;
+    _nmea = new Nmea();
 }
 
 /// @brief Seatalk Update Wind Angle
@@ -24,4 +22,21 @@ void SignalManager::UpdateApparentWindSpeed(double windSpeed)
 {
     _seaTalkData->apparentWindSpeed = windSpeed;
     _nmea->updateApparentWindSpeed(windSpeed);
+}
+
+/// @brief Seatalk Updated STW
+/// @param speed speed
+void SignalManager::UpdateSpeedThroughWater(double speed)
+{
+    _seaTalkData->speedThroughWater = speed;
+    _nmea->updateSTW(speed);
+}
+
+/// @brief Seatalk Updated Speed Over Ground
+/// @param speed
+void SignalManager::UpdateSpeedOverGround(double speed)
+{
+
+    _seaTalkData->speedOverGround = speed;
+    _nmea->updateSOG(speed);
 }

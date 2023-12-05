@@ -11,7 +11,8 @@ public:
     SignalManager(SeaTalkData *seaTalkData);
     void UpdateApparentWindAngle(double angle);
     void UpdateApparentWindSpeed(double speed);
-    
+    void UpdateSpeedThroughWater(double speed);
+    void UpdateSpeedOverGround(double speed);
 
 
 private:

@@ -44,6 +44,7 @@ int SeaTalk::checkBus()
                 double apparentWindAngle = ((message[2] << 8) | (message[3])) / 2.0;
 
                 Serial.printf("Apparent Wind Angle: %.1f degrees\n", apparentWindAngle);
+                _signalManager->UpdateApparentWindAngle(apparentWindAngle);
                 
             }
             // Apparent Wind Speed
@@ -52,14 +53,16 @@ int SeaTalk::checkBus()
                 double apparentWindSpeed = ((message[2] & 0x7f) + (message[3] & 0x0f) / 10.0);
 
                 Serial.printf("Apparent Wind Speed: %.1f knots\n", apparentWindSpeed);
+                _signalManager->UpdateApparentWindSpeed(apparentWindSpeed);
             }
 
             // Speed Through Water
             else if (message[0] == 0x20 && message.size() == 4)
             {
                 double speedThroughWater = ((message[3] << 8) | message[2]) / 10;
-
+                
                 Serial.printf("Speed Through Water: %.1f knots\n", speedThroughWater);
+                _signalManager->UpdateSpeedThroughWater(speedThroughWater);
             }
 
             // Speed Over Ground
@@ -68,6 +71,7 @@ int SeaTalk::checkBus()
                 double speedOverGround = ((message[3] << 8) | message[2]) / 10;
 
                 Serial.printf("Speed Over Ground: %.1f knots\n", speedOverGround);
+                _signalManager->UpdateSpeedOverGround(speedOverGround);
             }
             // Course Over Ground
             else if (message[0] == 0x53 && message.size() == 4)

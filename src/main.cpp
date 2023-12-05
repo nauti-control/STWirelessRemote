@@ -13,7 +13,6 @@ BoxWifi *_boxWifi = nullptr;
 Options *_options = nullptr;
 SeaTalkData *_seaTalkData=nullptr;
 SignalManager *_signalManager = nullptr;
-
 BoxWebServer *_boxWebServer = nullptr;
 
 void setup()
