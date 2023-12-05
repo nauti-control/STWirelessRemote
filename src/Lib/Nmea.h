@@ -1,7 +1,7 @@
 #ifndef NMEA_H
 #define NMEA_H
 
-#include "SeaTalkData.h"
+
 #include <Arduino.h>
 #include "NmeaServer.h"
 
@@ -10,12 +10,12 @@ class Nmea
 
 public:
     Nmea();
-    void updateTrueWind(SeaTalkData seaTalkData);
-    void updateApparentWind(SeaTalkData seaTalkData);
-    void updateGPS(SeaTalkData seaTalkData);
-    void updateSTW(SeaTalkData seaTalkData);
-    void updateSOG(SeaTalkData seaTalkData);
-    void updateCOG(SeaTalkData seaTalkData);
+  
+    void updateApparentWindAngle(double apparentWindAngle);
+    void updateApparentWindSpeed(double apparentWindSpeed);
+    void updateSTW(double stw);
+    void updateSOG(double sog);
+    void updateCOG(double cog);
 
 private:
     NmeaServer *_nmeaServer;

@@ -10,15 +10,16 @@
 #define FEET_TO_METERS 0.3048
 
 #include <SoftwareSerial.h>
-#include "SeaTalkData.h"
 #include "Nmea.h"
 #include "Commands.h"
+#include "models\AutoPilotData.h"
+#include "SignalManager.h"
 
 class SeaTalk
 {
 
 public:
-    SeaTalk();
+    SeaTalk(SignalManager *signalManager);
 
     const uint8_t ST_Minus_1[4] = {0x86, 0x11, 0x05, 0xFA};
     const uint8_t ST_Minus_10[4] = {0x86, 0x11, 0x06, 0xF9};
@@ -36,8 +37,8 @@ public:
 
 private:
     SoftwareSerial _mySerial;
-    SeaTalkData _seaTalkData;
-    Nmea *_nmea;
+    SignalManager *_signalManager;
+    
     int checkBus();
     void checkClearToWrite();
     bool send2ST(const uint8_t cmd[], int bytes);

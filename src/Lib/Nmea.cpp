@@ -6,31 +6,38 @@ Nmea::Nmea()
     _nmeaServer = new NmeaServer();
 }
 
-void Nmea::updateApparentWind(SeaTalkData seaTalkData)
+void Nmea::updateApparentWindAngle(double apparentWindAngle)
 {
     char sentence[100];
-    snprintf(sentence, sizeof(sentence), "$IIMWV,%.1f,A,%.1f,K,A*", seaTalkData.apparentWindAngle, seaTalkData.apparentWindSpeed);
+    snprintf(sentence, sizeof(sentence), "$IIMWV,%.1f,A,,K,A*", apparentWindAngle);
     sendNMEA(sentence);
 }
 
-void Nmea::updateSTW(SeaTalkData seaTalkData)
+void Nmea::updateApparentWindSpeed(double apparentWindSpeed)
 {
     char sentence[100];
-    snprintf(sentence, sizeof(sentence), "$IIVHW,,T,,M,%.1f,N,,K*", seaTalkData.speedThroughWater);
+    snprintf(sentence, sizeof(sentence), "$IIMWV,,A,%.1f,K,A*",  apparentWindSpeed);
     sendNMEA(sentence);
 }
 
-void Nmea::updateSOG(SeaTalkData seaTalkData)
+void Nmea::updateSTW(double stw)
 {
     char sentence[100];
-    snprintf(sentence, sizeof(sentence), "$IIVTG,,T,,M,%.1f,N,%.1f,K*", seaTalkData.speedOverGround, seaTalkData.speedOverGround * 1.852);
+    snprintf(sentence, sizeof(sentence), "$IIVHW,,T,,M,%.1f,N,,K*", stw);
     sendNMEA(sentence);
 }
 
-void Nmea::updateCOG(SeaTalkData seaTalkData)
+void Nmea::updateSOG(double sog)
 {
     char sentence[100];
-    snprintf(sentence, sizeof(sentence), "$IIVTG,%.1f,T,,M,,N,,K*", seaTalkData.courseOverGround);
+    snprintf(sentence, sizeof(sentence), "$IIVTG,,T,,M,%.1f,N,%.1f,K*", sog, sog * 1.852);
+    sendNMEA(sentence);
+}
+
+void Nmea::updateCOG(double cog)
+{
+    char sentence[100];
+    snprintf(sentence, sizeof(sentence), "$IIVTG,%.1f,T,,M,,N,,K*", cog);
     sendNMEA(sentence);
 }
 

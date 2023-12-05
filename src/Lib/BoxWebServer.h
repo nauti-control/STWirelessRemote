@@ -6,9 +6,9 @@
 #include <ESPAsyncWebServer.h>
 #include "Options.h"
 #include <SPIFFS.h>
-#include "SeaTalk.h"
 #include "Commands.h"
 #include "CommandStack.h"
+#include "SeaTalk.h"
 
 class BoxWebServer {
 

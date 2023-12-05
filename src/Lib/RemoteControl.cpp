@@ -1,5 +1,8 @@
 #include "RemoteControl.h"
 
+/// @brief REmote Control Constructor
+/// @param seaTalk seatalk reference to send commands
+/// @param options options reference to map controls
 RemoteControl::RemoteControl(SeaTalk *seaTalk, Options *options)
 {
     _seaTalk = seaTalk;
@@ -7,6 +10,7 @@ RemoteControl::RemoteControl(SeaTalk *seaTalk, Options *options)
     _mySwitch.enableReceive(34); // RF Receiver on inerrupt 4 => that is pin 7 on Micro
 }
 
+/// @brief hit point for main thread 
 void RemoteControl::processRemote()
 {
     unsigned long value = 0;
@@ -23,6 +27,9 @@ void RemoteControl::processRemote()
     }
 }
 
+/// @brief Get Command based on button press and options
+/// @param value button
+/// @return command
 commands RemoteControl::GetCommand(unsigned long value)
 {
 

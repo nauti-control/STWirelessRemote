@@ -1,10 +1,13 @@
 #include "Options.h"
 
+/// @brief Options class constructor
 Options::Options()
 {
     _preferences.begin("NautiControl", false);
 }
 
+/// @brief Save Web Options
+/// @param webOptions options
 void Options::SaveWebOptions(WebOptions webOptions)
 {
     _preferences.putInt("button1", webOptions.button1);
@@ -20,6 +23,8 @@ void Options::SaveWebOptions(WebOptions webOptions)
     
 }
 
+/// @brief Get the web options from storage
+/// @return options
 WebOptions Options::GetWebOptions()
 {
     Serial.println("Getting Options");

@@ -1,20 +1,23 @@
 
 #include "SeaTalk.h"
-#include <vector>
 
-SeaTalk::SeaTalk()
+
+/// @brief Seatalk class constructor
+/// @param signalManager Signal manager to send messages to other systems
+SeaTalk::SeaTalk(SignalManager *signalManager)
 {
     _mySerial.begin(4800, SWSERIAL_8S1, RX_IN, TX_OUT, true, 95, 11);
-    //_nmea= new Nmea();
+    _signalManager=signalManager;
 }
 
+/// @brief Method to run messages
 void SeaTalk::processMessages()
 {
-
     checkBus();
 }
 
-// Receive apparent wind speed from bus
+/// @brief Checks the seatalk bus for messages
+/// @return if valid
 int SeaTalk::checkBus()
 {
 
@@ -38,48 +41,49 @@ int SeaTalk::checkBus()
             // Apparent Wind Angle
             if (message[0] == 0x10 && message.size() == 4)
             {
-                _seaTalkData.apparentWindAngle = ((message[2] << 8) | (message[3])) / 2.0;
-                _seaTalkData.apparentWindAngle = millis();
-                Serial.printf("Apparent Wind Angle: %.1f degrees\n", _seaTalkData.apparentWindAngle);
+                double apparentWindAngle = ((message[2] << 8) | (message[3])) / 2.0;
+
+                Serial.printf("Apparent Wind Angle: %.1f degrees\n", apparentWindAngle);
+                
             }
             // Apparent Wind Speed
             else if (message[0] == 0x11 && message.size() == 4)
             {
-                _seaTalkData.apparentWindSpeed = ((message[2] & 0x7f) + (message[3] & 0x0f) / 10.0);
-                _seaTalkData.apparentWindSpeedLastUpdated = millis();
-                Serial.printf("Apparent Wind Speed: %.1f knots\n", _seaTalkData.apparentWindSpeed);
+                double apparentWindSpeed = ((message[2] & 0x7f) + (message[3] & 0x0f) / 10.0);
+
+                Serial.printf("Apparent Wind Speed: %.1f knots\n", apparentWindSpeed);
             }
 
             // Speed Through Water
             else if (message[0] == 0x20 && message.size() == 4)
             {
-                _seaTalkData.speedThroughWater = ((message[3] << 8) | message[2]) / 10;
-                _seaTalkData.speedThroughWaterLastUpdated = millis();
-                Serial.printf("Speed Through Water: %.1f knots\n", _seaTalkData.speedThroughWater);
+                double speedThroughWater = ((message[3] << 8) | message[2]) / 10;
+
+                Serial.printf("Speed Through Water: %.1f knots\n", speedThroughWater);
             }
 
             // Speed Over Ground
             else if (message[0] == 0x52 && message.size() == 4)
             {
-                _seaTalkData.speedOverGround = ((message[3] << 8) | message[2]) / 10;
-                _seaTalkData.speedOverGroundLastUpdated = millis();
-                Serial.printf("Speed Over Ground: %.1f knots\n", _seaTalkData.speedOverGround);
+                double speedOverGround = ((message[3] << 8) | message[2]) / 10;
+
+                Serial.printf("Speed Over Ground: %.1f knots\n", speedOverGround);
             }
             // Course Over Ground
             else if (message[0] == 0x53 && message.size() == 4)
             {
                 uint8_t u = (message[1] & 0xf0) >> 4;
                 uint8_t vw = message[2];
-                _seaTalkData.courseOverGround = (u & 0x3) * 90 + (vw & 0x3F) * 2 + ((u & 0xC) >> 2) / 2;
-                _seaTalkData.courseOverGroundLastUpdated = millis();
-                Serial.printf("Course Over Ground: %.1f degrees\n", _seaTalkData.courseOverGround);
+                double courseOverGround = (u & 0x3) * 90 + (vw & 0x3F) * 2 + ((u & 0xC) >> 2) / 2;
+
+                Serial.printf("Course Over Ground: %.1f degrees\n", courseOverGround);
             }
             // Depth Below Transducer
             else if (message[0] == 0x00 && message.size() == 5)
             {
-                _seaTalkData.depthBelowTransducer = (((message[4] >> 8) | message[3]) / 10);
-                _seaTalkData.depthBelowTransducerLastUpdated = millis();
-                Serial.printf("Depth Below Transducer %.1f Meters\n", _seaTalkData.depthBelowTransducer);
+                double depthBelowTransducer = (((message[4] >> 8) | message[3]) / 10);
+
+                Serial.printf("Depth Below Transducer %.1f Meters\n", depthBelowTransducer);
             }
 
             // Auto Pilot Data
@@ -132,10 +136,6 @@ int SeaTalk::checkBus()
                 }
 
                 Serial.printf("Auto Pilot Mode = %d ", pilotData.autoPilotMode);
-
-                _seaTalkData.autoPilotData = pilotData;
-
-                _seaTalkData.autoPilotDataLastUpdated = millis();
             }
         }
     }
@@ -143,6 +143,8 @@ int SeaTalk::checkBus()
     return -1;
 }
 
+/// @brief Send Command To Seatalk Bus
+/// @param cmd Command to send
 void SeaTalk::sendCommand(commands cmd)
 {
     Serial.println(cmd);
@@ -193,7 +195,11 @@ void SeaTalk::sendCompass(float heading)
     send2ST(message, sizeof(message));
 }
 
-// Send To Seatalk
+
+/// @brief Send to seatalk Bus
+/// @param cmd cmd
+/// @param bytes length
+/// @return did send
 bool SeaTalk::send2ST(const uint8_t cmd[], int bytes)
 {
     int j = 0;
@@ -241,7 +247,7 @@ bool SeaTalk::send2ST(const uint8_t cmd[], int bytes)
     return false;
 }
 
-// wait to serial line clear
+/// @brief Checks bus clear to write
 void SeaTalk::checkClearToWrite()
 {
 
