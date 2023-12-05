@@ -108,6 +108,7 @@ void BoxWebServer::SetOptions(AsyncWebServerRequest *request)
 
 void BoxWebServer::GetOptions(AsyncWebServerRequest *request)
 {
+    Serial.println("Get Web Options");
     WebOptions options = _options->GetWebOptions();
     AsyncResponseStream *response = request->beginResponseStream("application/json");
     response->print("{  \n");
@@ -120,10 +121,12 @@ void BoxWebServer::GetOptions(AsyncWebServerRequest *request)
     response->printf("\"button7opt\": %d, \n", options.button7);
     response->printf("\"button8opt\": %d, \n", options.button8);
     response->printf("\"timermin\": %d, \n", options.timermin);
-    response->printf("\"timersec\": %d, \n", options.timersec);
+    response->printf("\"timersec\": %d \n", options.timersec);
     response->print("}");
 
+  
     request->send(response);
+    Serial.println("Options Got");
 }
 
 void BoxWebServer::SendCommand(AsyncWebServerRequest *request)

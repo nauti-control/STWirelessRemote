@@ -12,10 +12,13 @@ function ConfigureSetupScreen() {
 }
 
 function GetDeviceOptions() {
+    console.log("Getting Device Options");
     $.getJSON('/GetOptions.json', function (data) {
+        
         SetOptions(data);
         var parentForm = document.getElementById("setupdiv");
         parentForm.style.visibility = "visible";
+      
     });
 }
 
