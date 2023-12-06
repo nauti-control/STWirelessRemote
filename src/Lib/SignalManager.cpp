@@ -40,3 +40,11 @@ void SignalManager::UpdateSpeedOverGround(double speed)
     _seaTalkData->speedOverGround = speed;
     _nmea->updateSOG(speed);
 }
+
+/// @brief Seatalk Update Course Over Ground
+/// @param courseOverGround  course
+void SignalManager::UpdateCourseOverGround(double courseOverGround)
+{
+    _seaTalkData->courseOverGround = courseOverGround;
+    _nmea->updateCOG(courseOverGround);
+}

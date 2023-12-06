@@ -13,6 +13,7 @@ public:
     void UpdateApparentWindSpeed(double speed);
     void UpdateSpeedThroughWater(double speed);
     void UpdateSpeedOverGround(double speed);
+    void UpdateCourseOverGround(double courseOverGround);
 
 
 private:

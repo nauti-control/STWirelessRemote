@@ -81,6 +81,8 @@ int SeaTalk::checkBus()
                 double courseOverGround = (u & 0x3) * 90 + (vw & 0x3F) * 2 + ((u & 0xC) >> 2) / 2;
 
                 Serial.printf("Course Over Ground: %.1f degrees\n", courseOverGround);
+
+                _signalManager->UpdateCourseOverGround(courseOverGround);
             }
             // Depth Below Transducer
             else if (message[0] == 0x00 && message.size() == 5)
