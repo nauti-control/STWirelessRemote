@@ -10,6 +10,7 @@ struct SeaTalkData
    double apparentWindSpeed;
    double speedThroughWater;
    double speedOverGround;
+   double courseOverGround;
 
 };
 

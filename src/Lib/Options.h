@@ -15,6 +15,7 @@ public:
 
 private:
     Preferences _preferences;
+    void CreateDefaults();
 };
 
 #endif
