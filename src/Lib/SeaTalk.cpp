@@ -1,13 +1,12 @@
 
 #include "SeaTalk.h"
 
-
 /// @brief Seatalk class constructor
 /// @param signalManager Signal manager to send messages to other systems
 SeaTalk::SeaTalk(SignalManager *signalManager)
 {
     _mySerial.begin(4800, SWSERIAL_8S1, RX_IN, TX_OUT, true, 95, 11);
-    _signalManager=signalManager;
+    _signalManager = signalManager;
 }
 
 /// @brief Method to run messages
@@ -45,7 +44,6 @@ int SeaTalk::checkBus()
 
                 Serial.printf("Apparent Wind Angle: %.1f degrees\n", apparentWindAngle);
                 _signalManager->UpdateApparentWindAngle(apparentWindAngle);
-                
             }
             // Apparent Wind Speed
             else if (message[0] == 0x11 && message.size() == 4)
@@ -60,7 +58,7 @@ int SeaTalk::checkBus()
             else if (message[0] == 0x20 && message.size() == 4)
             {
                 double speedThroughWater = ((message[3] << 8) | message[2]) / 10;
-                
+
                 Serial.printf("Speed Through Water: %.1f knots\n", speedThroughWater);
                 _signalManager->UpdateSpeedThroughWater(speedThroughWater);
             }
@@ -143,6 +141,16 @@ int SeaTalk::checkBus()
 
                 Serial.printf("Auto Pilot Mode = %d ", pilotData.autoPilotMode);
             }
+            // Nauti-Control Echo Command 2nd byte returns 1 to signify return
+            else if (message[0] == 0xAC)
+            {
+                if (message[1] == 0x0)
+                {
+                    uint8_t testNumber=message[3];
+                    uint8_t responsemessage[] = {0xAC, 0x01, 0x00, testNumber};
+                    send2ST(responsemessage, 4);
+                }
+            }
         }
     }
 
@@ -200,7 +208,6 @@ void SeaTalk::sendCompass(float heading)
     };
     send2ST(message, sizeof(message));
 }
-
 
 /// @brief Send to seatalk Bus
 /// @param cmd cmd
