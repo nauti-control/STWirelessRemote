@@ -7,11 +7,14 @@ Aside from the remote functionality the connection to the seatalk bus allows us 
 # Software
 The code is written in C++ using platform IO . I use Visual Code as my editor . The firmware uses soft serial with the parity bit acting at the 9th bit that seatalk protocol uses.  The seatalk datagrams I have been using an excellent technical guide by Thomas Knauf http://thomasknauf.de/rap/seatalk2.htm . There is two parts to the code 1. The main firmware 2. A mini web application for settings the button mapping settings as well as allowing the device to be controlled from a mobile device . This is written to the esp32 spiffs. These get built and uploaded to the ESP32 seperately from with the platform IO extension in Visual Code.
 
-Raise issues for any software bugs.
 
 # Hardware
 
 The PCB design is fairly simple and uses an ESP32 devkit 30 pin board along with optocouplers to provide some isolation between the seatalk 12v and 3.3v of the ESP32 . A 7805 is used to drop the 12v down to 5v to feed the ESP32 . I found using 12v directly on the vin caused major issues and burnt out the onboard regulator on certain boards . The 7805 does get quite hot but i've done a burn in test for several weeks continious use and no issues on the bench. The receiver is a RXb6 and the current firmware has support for mapping to 8 buttons the different remote functionality. 
+
+THe circuit design was created using the open source fritzing tool and source file is available in the repo along with generated gerbers used for making the PCBs . 
+
+The case design was created using tinker cad and you can view the original here https://www.tinkercad.com/things/47GMuNnkxJl-nauticontrol-seatalk?sharecode=v9_ytJjsey86pV6xQheSngRRn7UYJ45ZI_IGC7HBws0  
 
 You can purchase a fully hand built Wireless Controller from our online store which will help support ongoing development and new features <br/>
 https://nauti-control.com/product/st-wireless-controller-fully-built-with-4-button-remote/<br/>
