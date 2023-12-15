@@ -15,6 +15,8 @@ The PCB design is fairly simple and uses an ESP32 devkit 30 pin board along with
 
 THe circuit design was created using the open source fritzing tool and source file is available in the repo along with generated gerbers used for making the PCBs . 
 
+![Alt text](img/pcbdesign.jpg)
+
 The case design was created using tinker cad and you can view the original here https://www.tinkercad.com/things/47GMuNnkxJl-nauticontrol-seatalk?sharecode=v9_ytJjsey86pV6xQheSngRRn7UYJ45ZI_IGC7HBws0  
 
 You can purchase a fully hand built Wireless Controller from our online store which will help support ongoing development and new features <br/>
