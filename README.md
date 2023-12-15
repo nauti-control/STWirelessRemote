@@ -7,7 +7,12 @@ Aside from the remote functionality the connection to the seatalk bus allows us 
 # Software
 The code is written in C++ using platform IO . I use Visual Code as my editor . The firmware uses soft serial with the parity bit acting at the 9th bit that seatalk protocol uses.  The seatalk datagrams I have been using an excellent technical guide by Thomas Knauf http://thomasknauf.de/rap/seatalk2.htm . There is two parts to the code 1. The main firmware 2. A mini web application for settings the button mapping settings as well as allowing the device to be controlled from a mobile device . This is written to the esp32 spiffs. These get built and uploaded to the ESP32 seperately from with the platform IO extension in Visual Code.
 
+Raise issues for any software bugs.
+
 # Hardware
+
+The PCB design is fairly simple and uses an ESP32 devkit 30 pin board along with optocouplers to provide some isolation between the seatalk 12v and 3.3v of the ESP32 . A 7805 is used to drop the 12v down to 5v to feed the ESP32 . I found using 12v directly on the vin caused major issues and burnt out the onboard regulator on certain boards . The 7805 does get quite hot but i've done a burn in test for several weeks continious use and no issues on the bench. The receiver is a RXb6 and the current firmware has support for mapping to 8 buttons the different remote functionality. 
+
 You can purchase a fully hand built Wireless Controller from our online store which will help support ongoing development and new features <br/>
 https://nauti-control.com/product/st-wireless-controller-fully-built-with-4-button-remote/<br/>
 This includes a remote , 3d printed case and fully built PCB with latest firmware pre-installed , just plug into your seatalk system and go.<br/>
@@ -29,4 +34,9 @@ Bill Of Materials with links that will support on going development through affi
 
 Donate to support on going development and features.
 https://nauti-control.com/donate/
+
+# Disclaimer
+I provide all hardware and software without liability or gaurantees as expressed by the GPL licence this has been released under <br/>
+
+To avoid risk of damage ensure wiring is done correctly and while the system is off to avoid shorting or reverse polarity.
 
