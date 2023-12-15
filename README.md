@@ -50,3 +50,9 @@ I provide all hardware and software without liability or gaurantees as expressed
 
 To avoid risk of damage ensure wiring is done correctly and while the system is off to avoid shorting or reverse polarity.
 
+# Follow us on socials.
+
+https://www.facebook.com/nauti-control/
+https://www.instagram.com/nauticontrol/
+https://www.youtube.com/@nauti-control/
+
