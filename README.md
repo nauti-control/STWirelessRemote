@@ -1,3 +1,4 @@
+![Alt text](img/IMG_20231207_133414_191-1.jpg)
 # ST Wireless Remote Controller
 
 Open Source Wireless remote for Raymarine Seatalk ST1000/ST2000 autopilots as well as ST60 speed timer. Allows controlling of autopilot and various raymarine displays using 433mhz remote as well as mobile/tablet using built in WIFI Access Point. 
