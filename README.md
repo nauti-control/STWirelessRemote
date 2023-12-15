@@ -52,7 +52,7 @@ To avoid risk of damage ensure wiring is done correctly and while the system is 
 
 # Follow us on socials.
 
-https://www.facebook.com/nauti-control/
-https://www.instagram.com/nauticontrol/
-https://www.youtube.com/@nauti-control/
+https://www.facebook.com/nauti-control/<br/>
+https://www.instagram.com/nauticontrol<br/>
+https://www.youtube.com/@nauti-control/ <br/>
 
