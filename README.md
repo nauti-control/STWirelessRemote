@@ -19,6 +19,8 @@ THe circuit design was created using the open source fritzing tool and source fi
 
 The case design was created using tinker cad and you can view the original here https://www.tinkercad.com/things/47GMuNnkxJl-nauticontrol-seatalk?sharecode=v9_ytJjsey86pV6xQheSngRRn7UYJ45ZI_IGC7HBws0  
 
+![Alt text](img/case.jpg)
+
 You can purchase a fully hand built Wireless Controller from our online store which will help support ongoing development and new features <br/>
 https://nauti-control.com/product/st-wireless-controller-fully-built-with-4-button-remote/<br/>
 This includes a remote , 3d printed case and fully built PCB with latest firmware pre-installed , just plug into your seatalk system and go.<br/>
