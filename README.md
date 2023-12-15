@@ -19,6 +19,8 @@ THe circuit design was created using the open source fritzing tool and source fi
 
 The case design was created using tinker cad and you can view the original here https://www.tinkercad.com/things/47GMuNnkxJl-nauticontrol-seatalk?sharecode=v9_ytJjsey86pV6xQheSngRRn7UYJ45ZI_IGC7HBws0  
 
+STLS are included in the repo and ready to 3D print.
+
 ![Alt text](img/case.jpg)
 
 You can purchase a fully hand built Wireless Controller from our online store which will help support ongoing development and new features <br/>
