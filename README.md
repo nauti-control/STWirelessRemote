@@ -1,7 +1,7 @@
 ![Alt text](img/IMG_20231207_133414_191-1.jpg)
 # ST Wireless Remote Controller
 
-Open Source Wireless remote for Raymarine Seatalk ST1000/ST2000 autopilots as well as ST60 speed timer. Allows controlling of autopilot and various raymarine displays using 433mhz remote as well as mobile/tablet using built in WIFI Access Point. 
+Open Source Wireless remote for Raymarine Seatalk  autopilotsincluding ST1000/ST2000. Compatible with all devices that work with the Raymarine S100, also controls other insturments such ST60 speed timer. Allows controlling of autopilot and various raymarine displays using 433mhz remote as well as mobile/tablet using built in WIFI Access Point. 
 
 Aside from the remote functionality the connection to the seatalk bus allows us to read signals and decode other instrument data such as wind, speed , depth etc . Currently developing Seatalk -> NMEA 183 TCPIP transposer to allow Open CPN (and other such applications) to use the seatalk data , this would be done again over the wireless connection. This is currently under development . Other ideas for the future include a man over board mode where it'll set the heading nose to wind . These will be documented once completed on the main https://www.nauti-control.com website.
 
