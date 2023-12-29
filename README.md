@@ -5,6 +5,20 @@ Open Source Wireless remote for Raymarine Seatalk  autopilotsincluding ST1000/ST
 
 Aside from the remote functionality the connection to the seatalk bus allows us to read signals and decode other instrument data such as wind, speed , depth etc . Currently developing Seatalk -> NMEA 183 TCPIP transposer to allow Open CPN (and other such applications) to use the seatalk data , this would be done again over the wireless connection. This is currently under development . Other ideas for the future include a man over board mode where it'll set the heading nose to wind . These will be documented once completed on the main https://www.nauti-control.com website.
 
+#Compatibility
+
+Works with all auto pilots that use classic Seatalk interface.
+
+ST4000,ST4000+,ST5000,ST5000+,ST6000,ST6000+,ST6001,ST6001+,ST6002,ST6002+,ST7000,ST7000+,ST7001+,ST7002,ST7002+,ST8001,ST8001+,ST8002,ST8002+RayPilot 650
+
+ST1000,ST1000+,ST2000,ST2000+
+
+ST3000,ST4000,ST5000,ST6000,ST7000,Autohelm Sport pilot,Autohelm Sport pilot +
+ 
+Type 100,Type 300,Type 150,Type 400,S1000,Sport pilot,sport pilot +,Smartpilot: S1,S1G,S2,S2G,S3,S3G,SP1,SPX5,SPX10 ,SPX30,SPX40,ST70P
+
+ST60 Speed + Tri Data Displays (Timer)
+
 # Software
 The code is written in C++ using platform IO . I use Visual Code as my editor . The firmware uses soft serial with the parity bit acting at the 9th bit that seatalk protocol uses.  The seatalk datagrams I have been using an excellent technical guide by Thomas Knauf http://thomasknauf.de/rap/seatalk2.htm . There is two parts to the code 1. The main firmware 2. A mini web application for settings the button mapping settings as well as allowing the device to be controlled from a mobile device . This is written to the esp32 spiffs. These get built and uploaded to the ESP32 seperately from with the platform IO extension in Visual Code.
 
@@ -45,6 +59,7 @@ Bill Of Materials with links that will support on going development through affi
 
 Donate to support on going development and features.
 https://nauti-control.com/donate/
+
 
 # Disclaimer
 I provide all hardware and software without liability or gaurantees as expressed by the GPL licence this has been released under <br/>
