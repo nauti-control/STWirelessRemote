@@ -41,6 +41,7 @@ Bill Of Materials with links that will support on going development through affi
 3 x 10kohm 1/4 Resistor - https://s.click.aliexpress.com/e/_DkgFIJ7 <br />
 2 x PC817 Optocoupler -https://s.click.aliexpress.com/e/_DEU20qv <br />
 1 x PCB Terminal Block 5.00mm pitch - https://s.click.aliexpress.com/e/_DFGZrcp <br />
+1 x 433mhz Antenna https://s.click.aliexpress.com/e/_DDclB9J <br/>
 
 Donate to support on going development and features.
 https://nauti-control.com/donate/
