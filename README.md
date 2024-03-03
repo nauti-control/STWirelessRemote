@@ -22,6 +22,11 @@ Type 100,Type 300,Type 150,Type 400,S1000,Sport pilot,sport pilot +,Smartpilot: 
 
 ST60 Speed + Tri Data Displays (Timer)
 
+Also works with newer autopilots with additional adapter for Seatalk 1 to Seatalk NG
+https://www.raymarine.com/en-us/our-products/networking-and-accessories/seatalk/seatalk-1-to-seatalk-ng-convertor
+Evolution EV100 , 150, 200 , 300 & 400
+
+
 # Software
 The code is written in C++ using platform IO . I use Visual Code as my editor . The firmware uses soft serial with the parity bit acting at the 9th bit that seatalk protocol uses.  The seatalk datagrams I have been using an excellent technical guide by Thomas Knauf http://thomasknauf.de/rap/seatalk2.htm . There is two parts to the code 1. The main firmware 2. A mini web application for settings the button mapping settings as well as allowing the device to be controlled from a mobile device . This is written to the esp32 spiffs. These get built and uploaded to the ESP32 seperately from with the platform IO extension in Visual Code.
 
