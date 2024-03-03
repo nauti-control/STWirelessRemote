@@ -23,7 +23,9 @@ Type 100,Type 300,Type 150,Type 400,S1000,Sport pilot,sport pilot +,Smartpilot: 
 ST60 Speed + Tri Data Displays (Timer)
 
 Also works with newer autopilots with additional adapter for Seatalk 1 to Seatalk NG
+
 https://www.raymarine.com/en-us/our-products/networking-and-accessories/seatalk/seatalk-1-to-seatalk-ng-convertor
+
 Evolution EV100 , 150, 200 , 300 & 400
 
 
