@@ -70,6 +70,9 @@ Bill Of Materials with links that will support on going development through affi
 Donate to support on going development and features.
 https://nauti-control.com/donate/
 
+Beta Code for next version is available to top tier sponsors , visit my sponsor page to support ongoing development and gain early access to all updates.
+https://github.com/sponsors/nauti-control
+
 
 # Disclaimer
 I provide all hardware and software without liability or gaurantees as expressed by the GPL licence this has been released under <br/>
