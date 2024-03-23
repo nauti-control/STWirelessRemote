@@ -6,7 +6,12 @@ Open Source Wireless remote for Raymarine Seatalk  autopilotsincluding ST1000/ST
 Aside from the remote functionality the connection to the seatalk bus allows us to read signals and decode other instrument data such as wind, speed , depth etc . Currently developing Seatalk -> NMEA 183 TCPIP transposer to allow Open CPN (and other such applications) to use the seatalk data , this would be done again over the wireless connection. This is currently under development . Other ideas for the future include a man over board mode where it'll set the heading nose to wind . These will be documented once completed on the main https://www.nauti-control.com website.
 
 See how to setup box and demo on our youtube channel.
+<br/>
 https://youtu.be/EBTYceL7NpY
+
+V2 Firmware is in a private repo while in Beta available to top level sponsors and supporters who buy a premade box directly from our shop.
+<br/>
+https://github.com/sponsors/nauti-control
 
 # Compatibility
 
