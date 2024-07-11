@@ -62,7 +62,7 @@ Bill Of Materials with links that will support on going development through affi
 1 x ESP32 - https://s.click.aliexpress.com/e/_DD5c10v <br />
 1 x RXB6 433Mhz Superheterodyne Receiver - https://s.click.aliexpress.com/e/_DCJstw9 <br />
 1 x 4 Button Remote https://nauti-control.com/product/4-button-wireless-remote-for-st-wireless-remote-controller/<br />
-1 x 5v Voltage REgulator - [https://s.click.aliexpress.com/e/_DBNSCGH] <br />
+1 x 5v Voltage REgulator - https://s.click.aliexpress.com/e/_DmOF9RV <br />
 1 x BC547 Transister - https://s.click.aliexpress.com/e/_DCKfQwp <br />
 2 x 270ohm 1/4W Resistor - https://s.click.aliexpress.com/e/_DkgFIJ7 <br />
 1 x 1kohm 1/4 Resistor - https://s.click.aliexpress.com/e/_DkgFIJ7 <br />
